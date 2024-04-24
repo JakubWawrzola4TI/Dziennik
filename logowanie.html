@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="logowanie.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    
+</head>
+<body>
+    <header>
+        <img src="Logo.svg" alt="Brak" width="500px" height="100px">
+        
+    </header>
+    <div class="logowanie">
+        <div id="KomunikatPowitalny">
+            <h2>Zaloguj się do dziennika!</h1>
+        </div>
+    </div>
+    
+    <form id="loginForm" method="post" action="login.php" onsubmit="return walidacjaDanych()">
+        <label for="username">Login:</label>
+        <input type="text" id="username" name="username"><br>
+        <div id="error-message-username" class="error" style="display: none;"></div>
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password"><br>
+        <div id="error-message-password" class="error" style="display: none;"></div>
+        <input type="submit" value="Zaloguj">
+    </form>
+</body>
+<script>
+    window.onload = function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('error') && urlParams.get('error') === '1') {
+            alert("Błędny login lub hasło!");
+        }
+    };
+</script>
+</html>

@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+h2 {
+    margin: 0px;
+}
+header {
+    width: 100%;
+    min-height: 50px;
+    max-height: 10%;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    min-height: 50px;
+    background-color: bisque;
+    overflow: hidden;
+}
+
+nav button {
+    height: 80%;
+    margin: 2%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+}
+    aside {
+        width:30%;
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+        aside .nazwa1 {
+            width: 100%;
+            height: 10%;
+            background-color: blueviolet;
+            margin:0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            aside .nazwa1 h2 {
+                text-align: center;
+            }
+
+        aside table {
+            flex-grow: 1;
+            background-color: darkgray;
+        }
+    main {
+        width: 70%;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
