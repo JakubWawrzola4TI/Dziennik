@@ -9,8 +9,9 @@ body {
     flex-direction: column;
     align-items: center;
     background:url(tlo.jpg);
-    background-size: 100%;
+    background-size: cover; /* Zmieniamy na cover */
     background-repeat: no-repeat;
+    background-position: center; /* Wyśrodkowanie tła */
 }
 
 header {
