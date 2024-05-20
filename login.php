@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_id = $row['Id_nauczyciela'];
         $_SESSION['user_id'] = $user_id;
         $_SESSION['role'] = 'nauczyciel'; // Ustawienie roli nauczyciela
-        header("Location: nauczyciel/index.html?user_id=$user_id");
+        session_write_close();
+        header("Location: nauczyciel/index.php");
         exit();
     }
 
@@ -38,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_id = $row['Id_ucznia'];
         $_SESSION['user_id'] = $user_id;
         $_SESSION['role'] = 'uczen'; // Ustawienie roli ucznia
+        session_write_close();
         header("Location: uczen/index.php?user_id=$user_id");
         exit();
     }
@@ -52,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user_id = $row['Id_rodzica'];
         $_SESSION['user_id'] = $user_id;
         $_SESSION['role'] = 'rodzic'; // Ustawienie roli rodzica
+        session_write_close();
 
         $sql = "SELECT Id_ucznia FROM uczniowie WHERE Id_rodzica = '$user_id'";
         $res = mysqli_query($conn, $sql);

@@ -1,81 +1,140 @@
+/* Styl dla strony */
 body {
+    width: 100%;
+    height: 150vh;
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  main {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-}
-h2 {
-    margin: 0px;
-}
-header {
-    width: 100%;
-    min-height: 50px;
-    max-height: 10%;
-    background-color: grey;
-    display: flex;
-    justify-content: center;
+    padding: 1%;
     align-items: center;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+  }
+  
+  .plan {
     width: 100%;
-    height: 5%;
-    min-height: 50px;
-    background-color: bisque;
-    overflow: hidden;
-}
-
-nav button {
-    height: 80%;
-    margin: 2%;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.content {
+    flex-shrink: 0; /* Zapobiega pomniejszaniu planu */
+    box-sizing: border-box; /* Zapobiega dodatkowym marginesom i paddingom, które mogą przekraczać szerokość */
+    margin-bottom: 1%;
+    text-align: center;
+    
+  }
+  .plan h2 {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding:10px;
+  }
+  /* Styl dla całej tabelki */
+  .plan table {
+    width: 100%; /* Szerokość tabeli 100% */
+    border-collapse: collapse; /* Złączanie krawędzi tabeli */
+  }
+  
+  /* Styl dla nagłówków kolumn */
+  .plan th {
+    background-color: #f2f2f2;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  /* Styl dla komórek danych */
+  .plan td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .plan tr th:first-child,
+  .plan tr td:first-child {
+    background-color: #b6b6b6; /* Kolor dla pierwszej kolumny */
+  }
+  
+  .plan tr:first-child th {
+    background-color: #7e7e7e; /* Ciemniejszy kolor dla pierwszego wiersza */
+  }
+  
+  
+  
+  .oceny-obecnosc {
+    width: 100%;
     flex-grow: 1;
-    width: 100%;
-    background-color: aquamarine;
+    max-height: 500px;
+    box-sizing: border-box; /* Zapobiega dodatkowym marginesom i paddingom, które mogą przekraczać szerokość */
     display: flex;
     flex-direction: row;
-}
-    aside {
-        width:30%;
-        background-color: azure;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  #oceny {
+    width: 100%;
+    margin-bottom:1%;
+    height: 100%;
+    margin-right: 1%;
+  }
+  #obecnosc {
+    width: 100%;
+    margin-bottom:1%;
+    height: 100%;
+  }
+  
+  .ramka{
+    width:100%;
+    height: 200%;
+    
+  }
+  
+  .h22 {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding:10px;
+    text-align: center;
+  }
+  @media (max-width: 500px) {
+    .plan {
+      overflow-x: scroll;
     }
-        aside .nazwa1 {
-            width: 100%;
-            height: 10%;
-            background-color: blueviolet;
-            margin:0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-            aside .nazwa1 h2 {
-                text-align: center;
-            }
+  }
+  
+  
+  
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .button:hover{
+    background-color: #555;
+  }
+  
+  main ul {
+        list-style-type: none;
+  }
 
-        aside table {
-            flex-grow: 1;
-            background-color: darkgray;
-        }
-    main {
-        width: 70%;
-        background-color: blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-   
+ .none {
+    display: none;
+  }
