@@ -17,9 +17,9 @@
             } else if ($nazwa_dnia === "Friday") {
                 $nazwa_dnia_pl = "Piątek";
             } else if ($nazwa_dnia === "Saturday") {
-                $nazwa_dnia_pl = "Sobota";
+                $nazwa_dnia_pl = "Weekend";
             } else if ($nazwa_dnia === "Sunday") {
-                $nazwa_dnia_pl = "Niedziela";
+                $nazwa_dnia_pl = "Weekend";
             } else {
                 $nazwa_dnia_pl = "Nieznany dzień";
             }

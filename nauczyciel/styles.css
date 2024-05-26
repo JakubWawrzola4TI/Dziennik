@@ -16,6 +16,8 @@ body {
     color: #fff;
     padding: 20px;
     text-align: center;
+    height: 5%;
+    font-size: 500%;
   }
   
   main {
@@ -24,6 +26,7 @@ body {
     padding: 1%;
     align-items: center;
     height: 100%;
+    background-color: red;
   }
   
   .plan {

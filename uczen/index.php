@@ -98,7 +98,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_poniedzialek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Poniedziałek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -117,7 +117,7 @@
                 if($res_poniedzialek == TRUE){
                     $row_poniedzialek = mysqli_fetch_array($res_poniedzialek);
                     echo "<table border='1'>";
-                    echo "<tr><th>Plan Jana</th>
+                    echo "<tr><th></th>
                             <th>".$row_poniedzialek['Lekcja1']."</th>
                             <th>".$row_poniedzialek['Lekcja2']."</th>
                             <th>".$row_poniedzialek['Lekcja3']."</th>
@@ -169,7 +169,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_wtorek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Wtorek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -187,7 +187,7 @@
                 if ($res_wtorek == TRUE) {
                     $row_wtorek = mysqli_fetch_array($res_wtorek);
                     echo "<table border='1'>";
-                        echo "<tr><th>Plan Jana</th>
+                        echo "<tr><th></th>
                                 <th>".$row_wtorek['Lekcja1']."</th>
                                 <th>".$row_wtorek['Lekcja2']."</th>
                                 <th>".$row_wtorek['Lekcja3']."</th>
@@ -239,7 +239,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_sroda = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Środa = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -257,7 +257,7 @@
                 if ($res_Sroda == TRUE) {
                     $row_sroda = mysqli_fetch_array($res_Sroda);
                     echo "<table border='1'>";
-                    echo "<tr><th>Plan Jana</th>
+                    echo "<tr><th></th>
                             <th>".$row_sroda['Lekcja1']."</th>
                             <th>".$row_sroda['Lekcja2']."</th>
                             <th>".$row_sroda['Lekcja3']."</th>
@@ -327,7 +327,7 @@
                 if ($res_czwartek == TRUE) {
                     $row_czwartek = mysqli_fetch_array($res_czwartek);
                     echo "<table border='1'>";
-                    echo "<tr><th>Plan Jana</th>
+                    echo "<tr><th></th>
                             <th>".$row_czwartek['Lekcja1']."</th>
                             <th>".$row_czwartek['Lekcja2']."</th>
                             <th>".$row_czwartek['Lekcja3']."</th>
@@ -399,7 +399,7 @@
                 if ($res_piatek == TRUE) {
                     $row_piatek = mysqli_fetch_array($res_piatek);
                     echo "<table border='1'>";
-                    echo "<tr><th>Plan Jana</th>
+                    echo "<tr><th></th>
                             <th>".$row_piatek['Lekcja1']."</th>
                             <th>".$row_piatek['Lekcja2']."</th>
                             <th>".$row_piatek['Lekcja3']."</th>
@@ -453,7 +453,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_poniedzialek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Poniedziałek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -488,7 +488,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_wtorek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Wtorek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -523,7 +523,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_sroda = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Środa = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -558,7 +558,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_czwartek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Czwartek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -593,7 +593,7 @@
                 p8.Id_Pomieszczenia AS Id_Pomieszczenia8
                 FROM uczniowie u
                 JOIN klasa k ON u.id_klasy = k.id_klasy
-                JOIN plan_klasy pk ON k.plan_klasy_piatek = pk.id_Planu_l
+                JOIN plan_klasy pk ON k.plan_klasy_Piątek = pk.id_Planu_l
                 JOIN plan_lekcjowy pl ON pk.Id_planu_l = pl.Id_planu_l
                 JOIN plan_godzinowy pg ON pk.Id_Planu_g = pg.Id_planu_g
                 LEFT JOIN przedmioty p1 ON pl.Lekcja1_P = p1.Id_przedmiotu
@@ -615,7 +615,7 @@
                     $row_czwartek = mysqli_fetch_array($res_czwartek);
                     $row_piatek = mysqli_fetch_array($res_piatek);
                     echo "<table border='1'>";
-                    echo "<tr><th>Plan Jana</th>
+                    echo "<tr><th></th>
                             <th>".$row_poniedzialek['Lekcja1']."</th>
                             <th>".$row_poniedzialek['Lekcja2']."</th>
                             <th>".$row_poniedzialek['Lekcja3']."</th>
