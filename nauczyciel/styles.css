@@ -1,143 +1,92 @@
-/* Styl dla strony */
-body {
-    width: 100%;
-    height: 150vh;
-    margin: 0;
-    padding: 0;
-    overflow:scroll;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    height: 5%;
-    font-size: 500%;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    padding: 1%;
-    align-items: center;
-    height: 100%;
-    background-color: red;
-  }
-  
-  .plan {
-    width: 100%;
-    flex-shrink: 0; /* Zapobiega pomniejszaniu planu */
-    box-sizing: border-box; /* Zapobiega dodatkowym marginesom i paddingom, które mogą przekraczać szerokość */
-    margin-bottom: 1%;
-    text-align: center;
-    
-  }
-  .plan h2 {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding:10px;
-  }
-  /* Styl dla całej tabelki */
-  .plan table {
-    width: 100%; /* Szerokość tabeli 100% */
-    border-collapse: collapse; /* Złączanie krawędzi tabeli */
-  }
-  
-  /* Styl dla nagłówków kolumn */
-  .plan th {
-    background-color: #f2f2f2;
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  /* Styl dla komórek danych */
-  .plan td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: center;
-  }
-  
-  .plan tr th:first-child,
-  .plan tr td:first-child {
-    background-color: #b6b6b6; /* Kolor dla pierwszej kolumny */
-  }
-  
-  .plan tr:first-child th {
-    background-color: #7e7e7e; /* Ciemniejszy kolor dla pierwszego wiersza */
-  }
-  
-  
-  
-  .oceny-obecnosc {
-    width: 100%;
-    flex-grow: 1;
-    max-height: 500px;
-    box-sizing: border-box; /* Zapobiega dodatkowym marginesom i paddingom, które mogą przekraczać szerokość */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  #oceny {
-    width: 100%;
-    margin-bottom:1%;
-    height: 100%;
-    margin-right: 1%;
-  }
-  #obecnosc {
-    width: 100%;
-    margin-bottom:1%;
-    height: 100%;
-  }
-  
-  .ramka{
-    width:100%;
-    height: 200%;
-    
-  }
-  
-  .h22 {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding:10px;
-    text-align: center;
-  }
-  @media (max-width: 500px) {
-    .plan {
-      overflow-x: scroll;
-    }
-  }
-  
-  
-  
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .button:hover{
-    background-color: #555;
-  }
-  
-  main ul {
-        list-style-type: none;
-  }
+html {
+  margin: 0;
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+}
 
- .none {
-    display: none;
-  }
+body {
+  margin: 0;
+  padding:0;
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: darkgoldenrod;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav {
+  background-color: coral;
+  padding:0;
+}
+
+
+
+/*TABELA*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* Styl dla nagłówka tabeli */
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+/* Styl dla komórek tabeli */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  transition: height 0.3s ease; /* Dodanie płynnej zmiany wysokości */
+}
+
+/* Alternatywne kolory wierszy */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Styl dla nagłówka pierwszej kolumny */
+tr#trrow th {
+  background-color: #e6e6e6;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Dodatkowy styl dla komórek zawierających lekcje */
+td {
+  white-space: pre-line; /* Umożliwia łamanie linii */
+}
+
+/* Dodatkowy styl dla separatora */
+.separator {
+  display: block;
+  margin: 5px 0;
+  border-top: 2px dashed #000000;
+}
+
+tr:nth-child(2) td:hover {
+  height: 300px; /* Wysokość po najechaniu */
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}

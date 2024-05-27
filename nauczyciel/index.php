@@ -6,7 +6,7 @@
     <title>Logowanie</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" type="image/x-icon" href="../favicon.svg">
-    
+    <script src="script.js" defer></script>
 </head>
 <body>
     <?php 
@@ -24,47 +24,31 @@
 
 
     <header>
-        Witaj 
-            <?Php   
-                $sql = "SELECT Imie FROM nauczyciele WHERE Id_nauczyciela = '$user_id'";
-                $wynik_imie = mysqli_query($conn, $sql);
-                $imie_nauczyciela = mysqli_fetch_assoc($wynik_imie);
-                echo ($imie_nauczyciela['Imie']);
-            ?> !
+        <h1>
+            Witaj 
+                <?Php   
+                    $sql = "SELECT Imie FROM nauczyciele WHERE Id_nauczyciela = '$user_id'";
+                    $wynik_imie = mysqli_query($conn, $sql);
+                    $imie_nauczyciela = mysqli_fetch_assoc($wynik_imie);
+                    echo ($imie_nauczyciela['Imie']);
+                ?> !
+        </h1>
     </header>
     <nav>
-        <div class="plan" id="plan">
-            
-        </div>
-    </nav>
-    
-
-    <nav>
         <?php
-                wyswietl_plan_nauczyciela($conn,$user_id,$dzien_tygodnia);
+                wyswietl_plan_nauczyciela($conn,$user_id,'Czwartek');
         ?>
     </nav>
-
-    <main class="none">
-        <ul>
-            <li>
-                <a href="uczniowie-mgmt.php" class="button">Zarządzanie uczniami</a>
-            </li>
-            <li>
-                <a href="uczniowie-mgmt.php" class="button">Zarządzanie ocenami</a>
-            </li>
-            <li>
-                <a href="uczniowie-mgmt.php" class="button">Zarządzanie obecnością</a>
-            </li>
-            <li>
-                <a href="uczniowie-mgmt.php" class="button">Zarządzanie uczniami</a>
-            </li>
-
-        </ul>
+    <main>
+        <iframe src="sidebar.php" frameborder="0">
+        </iframe>
+        <iframe src="ramka.php" frameborder="0">
+        </iframe>
     </main>
+
+
     
     <?php
-
         function wyswietl_plan_nauczyciela($conn, $id_nauczyciela, $dzien_tygodnia) {
             $dni_tygodnia = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
             if ($dzien_tygodnia == 'Weekend') {
@@ -143,7 +127,8 @@
                     }
                     echo "<tr id='trrow'><th>$dzien</th>";
                     for ($i = 1; $i <= 8; $i++) {
-                        echo "<th>";
+                        $id = 'komorka'.$i;
+                        echo "<th id='$id'>";
                         if (!empty($lekcje[$i])) {
                             foreach ($lekcje[$i] as $key => $nazwa) {
                                 echo $nazwa;
@@ -154,7 +139,7 @@
                                     echo "<br>" . $klasy[$i][$key];
                                 }
                                 if ($key < count($lekcje[$i]) - 1) {
-                                    echo "<br>-------------<br>";
+                                    echo "<a class='separator'>";
                                 }
                             }
                         }
@@ -168,11 +153,7 @@
             }
             echo "</table>";
         }
-        
-
-
-
-        ?>
+    ?>
     
  
 </body>
